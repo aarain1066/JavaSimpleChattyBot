@@ -16,16 +16,23 @@ public class SimpleBot {
         System.out.println("Let me guess your age.");
         System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
 
-        int remThree = scanner.nextInt();
-        int remFive  = scanner.nextInt();
-        int remSeven = scanner.nextInt();
+        int rem3 = scanner.nextInt();
+        int rem5 = scanner.nextInt();
+        int rem7 = scanner.nextInt();
 
+        int age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
 
-        //System.out.println(10 / (2 + 2) + 4 * 8);
+        System.out.println("Your age is " + age + "; that's a good time to start programming!");
+        System.out.println("Now I will prove to you that I can count to any number you want.");
 
-        int yourAge = (remThree * 70 + remFive * 21 + remSeven * 15) % 105;
-        // reading all remainders
+        // read a number and count to it here
 
-        System.out.println("Your age is " + yourAge + "; that's a good time to start programming!");
+        int chosenNumber = scanner.nextInt();
+
+        for (int i = 0; i <= chosenNumber; i++){
+            System.out.println(i + "!");
+        }
+
+        System.out.println("Completed, have a nice day!");
     }
 }
